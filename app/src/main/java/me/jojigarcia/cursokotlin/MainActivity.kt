@@ -2,7 +2,6 @@ package me.jojigarcia.cursokotlin
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -12,9 +11,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         button.setOnClickListener {
-            val text = editText.text
-            Toast.makeText(this, text, Toast.LENGTH_LONG).show()
-            editText.setText(" ")
+            toast(editText.text) //Usa la función ya creada en el Extensions.kt
         }
     }
 }
